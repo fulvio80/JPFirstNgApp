@@ -1,0 +1,51 @@
+<h1>Users</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Username</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of users">
+            <th scope="row">
+                {{item.id}}    
+            </th>
+            <td>{{item.name}}</td>
+            <td>{{item.username}}</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm" (click)="removeUser(item)">Remove</button>
+                <button type="button" class="btn btn-secondary btn-sm mx-1" (click)="updateUser(item)">Update</button>
+                <button type="button" class="btn btn-primary btn-sm" (click)="infoUser(item, content)">Detail</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">User Detail</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h5>Name: {{userDetail.name}}</h5>
+      <h5>Username: {{userDetail.username}}</h5>
+      <h5>Email: {{userDetail.email}}</h5>
+      <h5>Address: {{userDetail.address.street}}, {{userDetail.address.suite}}</h5>
+      <h5>City: {{userDetail.address.city}}</h5>
+      <h5>Zipcode: {{userDetail.address.zipcode}}</h5>
+      <h5>Geo: {{userDetail.address.geo.lat}}, {{userDetail.address.geo.lng}}</h5>
+      <h5>Phone: {{userDetail.phone}}</h5>
+      <h5>Website: {{userDetail.website}}</h5>
+      <hr>
+      <h4>Company</h4>
+      <h5>Name: {{userDetail.company.name}}</h5>
+      <h5>CathPhrase: {{userDetail.company.catchPhrase}}</h5>
+      <h5>Bs: {{userDetail.company.bs}}</h5>
+    </div>
+</ng-template>
+
+  

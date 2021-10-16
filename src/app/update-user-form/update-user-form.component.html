@@ -1,0 +1,25 @@
+<h1>User Update</h1>
+<form>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" id="name" [(ngModel)]="user.name">
+    </div>
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" id="username" [(ngModel)]="user.username">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" id="email" [(ngModel)]="user.email">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" name="phone" class="form-control" id="phone" [(ngModel)]="user.phone">
+    </div>
+    <div class="mb-3">
+        <label for="website" class="form-label">Website</label>
+        <input type="text" name="website" class="form-control" id="website" [(ngModel)]="user.website">
+    </div>
+
+    <button type="submit" class="btn btn-secondary" (click)="saveUser()">Submit</button>
+</form>
