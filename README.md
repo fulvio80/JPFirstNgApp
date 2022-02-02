@@ -1,5 +1,9 @@
 # JPFirstNgApp
 
+# About
+
+CRUD developed with Angular 12 and Bootstrap using the API available at https://jsonplaceholder.typicode.com. The app allows navigation via routing, features a modal for user details, and implements delete, edit, and data entry by simulating a server.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
 ## Development server
